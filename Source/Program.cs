@@ -10,13 +10,21 @@ namespace Source
         static void Main(string[] args)
         {
             var fileReader = new FileReader();
+            var sorter = new Sorter();
+
             var firstFile = fileReader.combinePaths(file1);
             var secondFile = fileReader.combinePaths(file2);
 
-            var firstList = fileReader.readFile(firstFile);
-            
+            var firstList = fileReader.returnIntegerArray(firstFile);
+            var secondList = fileReader.returnIntegerArray(secondFile);
+
+            firstList = sorter.quickSort(firstList);
+            secondList = sorter.quickSort(secondList);
+
+            sorter.printArray(firstList);
+            sorter.printArray(secondList);
         }
 
-        
+
     }
 }

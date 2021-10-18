@@ -1,11 +1,12 @@
 using System.IO;
 using System;
+using System.Collections.Generic;
 
 namespace Source
 {
     class FileReader
     {
-        public string[] readFile(string file)
+        private string[] readFile(string file)
         {
             string[] numberValues = { };
 
@@ -15,6 +16,19 @@ namespace Source
             }
 
             return numberValues;
+        }
+
+        public List<int> returnIntegerArray(string file)
+        {
+            var parsedArray = new List<int>();
+            var stringArray = readFile(file);
+            
+            foreach (var item in stringArray)
+            {
+                parsedArray.Add(Int32.Parse(item));
+            }
+
+            return parsedArray;
         }
 
         public string combinePaths(string fileToCombine)
