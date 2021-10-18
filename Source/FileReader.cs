@@ -22,7 +22,7 @@ namespace Source
         {
             var parsedArray = new List<int>();
             var stringArray = readFile(file);
-            
+
             foreach (var item in stringArray)
             {
                 parsedArray.Add(Int32.Parse(item));

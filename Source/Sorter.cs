@@ -19,9 +19,9 @@ namespace Source
         {
             if (start < end)
             {
-                int pivot = listToBeOrdered[start];
-                int startintPoint = start + 1;
-                int endingPoint = end;
+                var pivot = listToBeOrdered[start];
+                var startintPoint = start + 1;
+                var endingPoint = end;
 
                 while (startintPoint <= endingPoint)
                 {
