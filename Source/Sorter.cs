@@ -25,7 +25,7 @@ namespace Source
 
                 while (startintPoint <= endingPoint)
                 {
-                    if(listToBeOrdered[startintPoint] <= pivot)
+                    if (listToBeOrdered[startintPoint] <= pivot)
                     {
                         startintPoint++;
                     }
@@ -51,9 +51,27 @@ namespace Source
             }
         }
 
-        public void printArray(List<int> arr)
+        public List<int> mergeSort(int firstValue, int secondValue)
         {
-            arr.ForEach(Console.WriteLine);
+            var numberList = new List<int>();
+
+            if (firstValue >= secondValue)
+            {
+                numberList.Add(firstValue);
+                numberList.Add(secondValue);
+            }
+            else
+            {
+                numberList.Add(secondValue);
+                numberList.Add(firstValue);
+            }
+
+            return numberList;
+        }
+
+        public void printArray(List<int> arrayToPrint)
+        {
+            arrayToPrint.ForEach(Console.WriteLine);
         }
     }
 }

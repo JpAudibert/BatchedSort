@@ -1,6 +1,4 @@
 using System.IO;
-using System;
-using System.Collections.Generic;
 
 namespace Source
 {
@@ -16,6 +14,19 @@ namespace Source
             }
 
             return numberValues;
+        }
+
+        public string readLine(string file)
+        {
+            string line = "";
+
+            if (File.Exists(file))
+            {
+                line = File.ReadLines(file).ToString();
+            }
+
+            return line;
+
         }
 
     }

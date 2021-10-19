@@ -21,10 +21,7 @@ namespace Source
         {
             var parsedArray = new List<string>();
 
-            foreach (var item in intArray)
-            {
-                parsedArray.Add($"{item} ");
-            }
+            parsedArray.ForEach(item => item.ToString());
 
             return parsedArray;
         }
